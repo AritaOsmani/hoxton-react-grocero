@@ -1,0 +1,12 @@
+#store {
+    height: 40vh;
+    padding: 1rem;
+  
+    overflow-y: scroll;
+  
+    background-color: var(--primary-color);
+  }
+  
+ 
+  
+ 
