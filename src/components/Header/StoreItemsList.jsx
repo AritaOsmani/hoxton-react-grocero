@@ -9,6 +9,11 @@ function StoreItemsList(props) {
                 item={item}
                 alt={item.title}
                 key={item.id}
+                basket={props.basket}
+                setBasket={props.setBasket}
+                storeItems={props.storeItems}
+                increaseQuantityInBasket={props.increaseQuantityInBasket}
+                decreaseQuantityOfStoreItems={props.decreaseQuantityOfStoreItems}
             />)
         })}
 
