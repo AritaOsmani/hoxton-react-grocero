@@ -8,7 +8,6 @@ function Header(props) {
             storeItems={props.storeItems}
             basket={props.basket}
             setBasket={props.setBasket}
-
             increaseQuantityInBasket={props.increaseQuantityInBasket}
             decreaseQuantityOfStoreItems={props.decreaseQuantityOfStoreItems}
         />

@@ -125,7 +125,9 @@ function App() {
         decreaseQuantityOfStoreItems={decreaseQuantityOfStoreItems}
       />
 
-      <Main />
+      <Main
+        basket={basket}
+      />
 
 
     </div>
