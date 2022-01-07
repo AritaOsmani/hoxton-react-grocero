@@ -12,7 +12,9 @@ function Main(props) {
             increaseQuantityOfStoreItems={props.increaseQuantityOfStoreItems}
             storedItems={props.storedItems}
         />
-        <TotalSection />
+        <TotalSection
+            getTotal={props.getTotal}
+        />
     </main>
 }
 export default Main

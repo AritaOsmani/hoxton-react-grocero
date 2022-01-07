@@ -1,11 +1,12 @@
-function TotalSection() {
+function TotalSection(props) {
+
     return <div className="total-section">
         <div>
             <h3>Total</h3>
         </div>
 
         <div>
-            <span className="total-number">£0.00</span>
+            <span className="total-number">£ {props.getTotal}</span>
         </div>
     </div>
 }

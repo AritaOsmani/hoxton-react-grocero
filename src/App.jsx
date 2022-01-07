@@ -114,12 +114,14 @@ function App() {
     foundElement.quantity--;
     setBasket(newBasketItems);
   }
-  // function removeItemFromBasket(basketItem) {
-  //   const newBasketItems = [...basket];
-  //   const basketWithRemovedElement = newBasketItems.filter(item => item.id !== basketItem.id)
-  //   setBasket(basketWithRemovedElement);
-  // }
+  function getTotal() {
+    let total = 0;
+    for (const basketItem of basket) {
+      total += basketItem.quantity * basketItem.price;
+    }
 
+    return total;
+  }
   return (
     <div className="App">
       <Header
@@ -136,6 +138,7 @@ function App() {
         decreaseQuantityInBasket={decreaseQuantityInBasket}
         increaseQuantityOfStoreItems={increaseQuantityOfStoreItems}
         storedItems={storeItems}
+        getTotal={getTotal()}
       />
 
 
