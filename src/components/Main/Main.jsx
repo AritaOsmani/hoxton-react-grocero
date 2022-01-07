@@ -7,6 +7,10 @@ function Main(props) {
         <MainTitle />
         <CartContainer
             basket={props.basket}
+            setBasket={props.setBasket}
+            decreaseQuantityInBasket={props.decreaseQuantityInBasket}
+            increaseQuantityOfStoreItems={props.increaseQuantityOfStoreItems}
+            storedItems={props.storedItems}
         />
         <TotalSection />
     </main>

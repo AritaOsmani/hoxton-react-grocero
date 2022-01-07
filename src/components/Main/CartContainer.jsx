@@ -8,7 +8,11 @@ function CartContainer(props) {
                 return <CartItem
                     item={itemInBasket}
                     key={itemInBasket.id}
-
+                    basket={props.basket}
+                    setBasket={props.setBasket}
+                    decreaseQuantityInBasket={props.decreaseQuantityInBasket}
+                    increaseQuantityOfStoreItems={props.increaseQuantityOfStoreItems}
+                    storedItems={props.storedItems}
                 />
             })}
 

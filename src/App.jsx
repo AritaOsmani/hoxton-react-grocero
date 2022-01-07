@@ -114,6 +114,11 @@ function App() {
     foundElement.quantity--;
     setBasket(newBasketItems);
   }
+  // function removeItemFromBasket(basketItem) {
+  //   const newBasketItems = [...basket];
+  //   const basketWithRemovedElement = newBasketItems.filter(item => item.id !== basketItem.id)
+  //   setBasket(basketWithRemovedElement);
+  // }
 
   return (
     <div className="App">
@@ -127,6 +132,10 @@ function App() {
 
       <Main
         basket={basket}
+        setBasket={setBasket}
+        decreaseQuantityInBasket={decreaseQuantityInBasket}
+        increaseQuantityOfStoreItems={increaseQuantityOfStoreItems}
+        storedItems={storeItems}
       />
 
 
