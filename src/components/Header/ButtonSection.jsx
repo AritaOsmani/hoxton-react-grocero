@@ -10,6 +10,13 @@ function ButtonSection(props) {
         }}
             className='vegetables-btn'>Vegetables
         </button>
+        <select onChange={function (e) {
+            props.setSortValue(e.target.value);
+        }}>
+            <option disabled selected value="sort-by">Sort by</option>
+            <option value="price">By price</option>
+            <option value="title">By title</option>
+        </select>
     </div>
 }
 export default ButtonSection

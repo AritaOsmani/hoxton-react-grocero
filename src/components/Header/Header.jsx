@@ -7,6 +7,7 @@ function Header(props) {
         <Title />
         <ButtonSection
             setType={props.setType}
+            setSortValue={props.setSortValue}
         />
         <StoreItemsList
             storeItems={props.storeItems}

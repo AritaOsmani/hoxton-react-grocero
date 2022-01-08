@@ -9,8 +9,23 @@
   
  .button-section{
    display: grid;
-   grid-template-columns: repeat(2,100px);
+   grid-template-columns: repeat(2,100px) 120px;
    gap:15px;
    place-content: center;
    margin:20px 0;
+
+   
+ }
+ select{
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem 1rem;
+  background: white;
+
+  color: var(--primary-color);
+  font-weight: bold;
+
+  box-shadow: 0 0 0 2px royalblue, 0 0 0 4px white;
+
+
  }

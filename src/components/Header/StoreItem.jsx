@@ -5,7 +5,8 @@ function StoreItem(props) {
             return
         }
         const newBasket = [...props.basket];
-        const newStoreItems = [...props.storeItems];
+        // const newStoreItems = [...props.storeItems];
+        const newStoreItems = [...props.other];
 
         const itemToAdd = {
             id: storeItem.id,
@@ -21,13 +22,15 @@ function StoreItem(props) {
             props.increaseQuantityInBasket(storeItem, newBasket);
         }
         // props.decreaseQuantityOfStoreItems(storeItem, newStoreItems);
-        props.decreaseQuantityOfStoreItems(storeItem, props.other);
+        props.decreaseQuantityOfStoreItems(storeItem, newStoreItems);
     }
     return <li>
 
         <div className="store--item-icon">
             <img src={`./assets/icons/${props.item.id.toString().padStart(3, 0)}-${props.item.title}.svg`} alt={props.item.alt} />
         </div>
+        <div className='storeItem-name'>{props.item.title}</div>
+        <div className='storeItem-price'>£{props.item.price}</div>
         <div className="storeItem-quantity">{props.item.quantity}</div>
         <button onClick={function () {
             addItemToBasket(props.item)

@@ -9,7 +9,7 @@ function App() {
     {
       id: 1,
       title: 'beetroot',
-      price: 0.25,
+      price: 0.65,
       quantity: 5,
       type: 'Vegetable'
     },
@@ -81,6 +81,7 @@ function App() {
   ]);
   const [basket, setBasket] = useState([]);
   const [type, setType] = useState('');
+  const [sortValue, setSortValue] = useState('')
 
   function storeItemsToDisplay() {
     let display = [...storeItems];
@@ -91,7 +92,23 @@ function App() {
     if (type === 'Vegetable') {
       display = display.filter(item => item.type === type);
     }
-
+    if (sortValue === 'price') {
+      display.sort(function (a, b) {
+        return a.price - b.price;
+      })
+    }
+    if (sortValue === 'title') {
+      display.sort(function (a, b) {
+        let x = a.title.charAt(0).charCodeAt(0);
+        let y = b.title.charAt(0).charCodeAt(0);
+        if (x - y < 0) {
+          return -1;
+        }
+        if (x - y > 0) {
+          return 1;
+        }
+      });
+    }
     return display;
   }
 
@@ -157,6 +174,7 @@ function App() {
         decreaseQuantityOfStoreItems={decreaseQuantityOfStoreItems}
         setType={setType}
         other={storeItems}
+        setSortValue={setSortValue}
       />
 
       <Main
