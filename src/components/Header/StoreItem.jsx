@@ -27,6 +27,7 @@ function StoreItem(props) {
         <div className="store--item-icon">
             <img src={`./assets/icons/${props.item.id.toString().padStart(3, 0)}-${props.item.title}.svg`} alt={props.item.alt} />
         </div>
+        <div className="storeItem-quantity">{props.item.quantity}</div>
         <button onClick={function () {
             addItemToBasket(props.item)
         }}>Add to cart</button>
