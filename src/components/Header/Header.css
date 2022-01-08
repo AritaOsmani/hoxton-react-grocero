@@ -7,6 +7,10 @@
     background-color: var(--primary-color);
   }
   
- 
-  
- 
+ .button-section{
+   display: grid;
+   grid-template-columns: repeat(2,100px);
+   gap:15px;
+   place-content: center;
+   margin:20px 0;
+ }
