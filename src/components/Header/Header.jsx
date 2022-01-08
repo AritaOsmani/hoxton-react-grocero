@@ -14,6 +14,7 @@ function Header(props) {
             setBasket={props.setBasket}
             increaseQuantityInBasket={props.increaseQuantityInBasket}
             decreaseQuantityOfStoreItems={props.decreaseQuantityOfStoreItems}
+            other={props.other}
         />
     </header>
 }

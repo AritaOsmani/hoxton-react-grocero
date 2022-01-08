@@ -14,6 +14,7 @@ function StoreItemsList(props) {
                 storeItems={props.storeItems}
                 increaseQuantityInBasket={props.increaseQuantityInBasket}
                 decreaseQuantityOfStoreItems={props.decreaseQuantityOfStoreItems}
+                other={props.other}
             />)
         })}
 

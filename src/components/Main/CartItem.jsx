@@ -1,4 +1,5 @@
 function CartItem(props) {
+
     function removeItemFromBasket(basketItem) {
         const newBasketItems = [...props.basket];
         const basketWithRemovedElement = newBasketItems.filter(item => item.id !== basketItem.id)

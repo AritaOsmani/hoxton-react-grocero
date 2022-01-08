@@ -20,7 +20,8 @@ function StoreItem(props) {
         } else {
             props.increaseQuantityInBasket(storeItem, newBasket);
         }
-        props.decreaseQuantityOfStoreItems(storeItem, newStoreItems);
+        // props.decreaseQuantityOfStoreItems(storeItem, newStoreItems);
+        props.decreaseQuantityOfStoreItems(storeItem, props.other);
     }
     return <li>
 

@@ -83,13 +83,15 @@ function App() {
   const [type, setType] = useState('');
 
   function storeItemsToDisplay() {
-    let display = storeItems;
+    let display = [...storeItems];
+
     if (type === 'Fruit') {
       display = display.filter(item => item.type === type);
     }
     if (type === 'Vegetable') {
       display = display.filter(item => item.type === type);
     }
+
     return display;
   }
 
@@ -154,6 +156,7 @@ function App() {
         increaseQuantityInBasket={increaseQuantityInBasket}
         decreaseQuantityOfStoreItems={decreaseQuantityOfStoreItems}
         setType={setType}
+        other={storeItems}
       />
 
       <Main
@@ -162,6 +165,7 @@ function App() {
         decreaseQuantityInBasket={decreaseQuantityInBasket}
         increaseQuantityOfStoreItems={increaseQuantityOfStoreItems}
         storedItems={storeItems}
+        // storedItems={storeItemsToDisplay()}
         getTotal={getTotal()}
       />
 
